@@ -7,6 +7,7 @@ public class PlayButtonScript : MonoBehaviour
 {
     public void PlayGame()
     {
+        DataStore.Collectibles = new();
         SceneManager.LoadScene("Level_1_Scene");
     }
 }
