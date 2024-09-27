@@ -5,7 +5,37 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SnailJail_ReJailed.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: f633278bb097c4b3abf0cc4c212e117d
+  - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: dc565e1e6220cc740a3f025d64ca86b0
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: b84faf02cfa36d94386c080e6cc7cbc6
+  - enabled: 1
+    path: Assets/Scenes/HowToPlayScene.unity
+    guid: d590dd602c4ec6f4c8a24764f4983d52
+  - enabled: 1
+    path: Assets/Scenes/Level_1_Scene.unity
+    guid: 00a0a9218d1f2c0469e06c50b4b3b7f9
+  - enabled: 1
+    path: Assets/Scenes/Level_2_Scene.unity
+    guid: f6db44eaf3380c943bb1901fc49cca90
+  - enabled: 1
+    path: Assets/Scenes/Level_3_Scene.unity
+    guid: 2d4ce404070415246a499e09366b440f
+  - enabled: 1
+    path: Assets/Scenes/Level_4_Scene.unity
+    guid: 4c0edf124e580dc44b0808cce4f3aa60
+  - enabled: 1
+    path: Assets/Scenes/Level_5_Scene.unity
+    guid: ab77dddde82c0400d8352dad24a64470
+  - enabled: 1
+    path: Assets/Scenes/WinningScene.unity
+    guid: 01b57e4874bf34a6582cc8f90ef4ef71
+  - enabled: 1
+    path: Assets/Scenes/SpecialWinningScene.unity
+    guid: a2bdae659e199394dbb39775ec31c957
   m_configObjects: {}
