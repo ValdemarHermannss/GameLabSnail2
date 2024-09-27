@@ -106,12 +106,14 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             }
         }
+ 
         if (other.gameObject.tag == "Trap")
         {
             // Kills the player
             DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("GameOverScene");
         }
+       
         if (other.gameObject.tag == "RedPaint")
         {
             // Changes the color of the trail
