@@ -174,8 +174,11 @@ public class GameManager : MonoBehaviour
 
             Debug.Log(DataStore.Collectibles.Count);
             Destroy(other.gameObject);
+
+
         }
 
+        
     }
 
     // Collider disabling door
