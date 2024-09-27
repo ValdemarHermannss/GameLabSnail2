@@ -17,6 +17,9 @@ TagManager:
   - Button
   - MovingDoor
   - Walls
+  - GreenPaint
+  - GreenDoor
+  - DangerZone
   layers:
   - Default
   - TransparentFX

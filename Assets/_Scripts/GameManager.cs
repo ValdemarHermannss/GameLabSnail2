@@ -168,6 +168,11 @@ public class GameManager : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        if (other.gameObject.tag == "DangerZone")
+        {
+            Debug.Log("In the Zone");
+        }
+
         //Recipe scraps
         if (other.gameObject.CompareTag("RecipeScrap"))
         {

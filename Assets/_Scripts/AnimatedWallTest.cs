@@ -12,10 +12,12 @@ public class AnimatedWallTest : MonoBehaviour
 
     private bool isGrowing = true;
     private bool isCrushing = false;
+    private bool isInDanger = false;
 
     // Update is called once per frame
     void Update()
     {
+
         if (isGrowing)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, maxScale, Time.deltaTime * speed);
@@ -32,8 +34,22 @@ public class AnimatedWallTest : MonoBehaviour
             if (Vector3.Distance(transform.localScale, minScale) < 0.01f)
                 isGrowing = true;
         }
+        isCrushing = !isGrowing;     
+    } 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("DangerZone"))
+        {
+            isInDanger = true;
+            Debug.Log("this can't be good");
+        }
 
-        isCrushing = !isGrowing;
+        if (isInDanger == true)
+        {
+            other.gameObject.CompareTag("Snail");
+            DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
 }
 
