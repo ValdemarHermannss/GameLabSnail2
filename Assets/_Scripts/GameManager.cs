@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Trail
         tr = GetComponent<TrailRenderer>();
         tr.material = new Material(Shader.Find("Sprites/Default"));
 
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour
         DataStore.CurrentScene = SceneManager.GetActiveScene().name;
     }
 
-
+        //Colliders
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Door disabling code. It checks if the door has been collided with and if it's with the right color.
@@ -87,6 +88,8 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+        //Triggers
     private void OnTriggerEnter2D(Collider2D other)
     {
         {
@@ -107,6 +110,7 @@ public class GameManager : MonoBehaviour
             }
         }
  
+            //Traps
         if (other.gameObject.tag == "Trap")
         {
             // Kills the player
@@ -114,6 +118,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("GameOverScene");
         }
        
+        //Trail color changes
         if (other.gameObject.tag == "RedPaint")
         {
             // Changes the color of the trail
@@ -141,6 +146,7 @@ public class GameManager : MonoBehaviour
             currentColorEnum = availablecolors.blue;
         }
 
+        //Doors
         if (other.gameObject.tag == "RedDoor")
         {
             Debug.Log("Collided with Door");
@@ -152,6 +158,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        //Time pickups
         if (other.gameObject.CompareTag("Stopwatch"))
         {
             Debug.Log("Picked up " + other.gameObject.tag);
@@ -161,6 +168,7 @@ public class GameManager : MonoBehaviour
             Destroy(other.gameObject);
         }
 
+        //Recipe scraps
         if (other.gameObject.CompareTag("RecipeScrap"))
         {
             Debug.Log("Recipe Scrap collected ");
