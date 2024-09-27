@@ -842,7 +842,7 @@ GameObject:
   - component: {fileID: 1980140162}
   m_Layer: 0
   m_Name: Wall (2)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -971,29 +971,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedWall
       objectReference: {fileID: 0}
+    - target: {fileID: 2176816385179023446, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
+      propertyPath: m_TagString
+      value: MovingDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 5910161194488943765, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7c5cdbd14ebf88f408ea373530c14ced, type: 3}
     - target: {fileID: 6075542391921026302, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: speed
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6075542391921026302, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: maxScale.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6075542391921026302, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: maxScale.y
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6075542391921026302, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: minScale.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6075542391921026302, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: minScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6680986071957088483, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: m_LocalScale.x
@@ -1049,7 +1053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7174992294675550043, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: m_Size.y
-      value: 2.4852052
+      value: 2.4622731
       objectReference: {fileID: 0}
     - target: {fileID: 7174992294675550043, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: m_Offset.x
@@ -1057,15 +1061,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7174992294675550043, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: m_Offset.y
-      value: -1.1344056
+      value: -1.1229396
       objectReference: {fileID: 0}
     - target: {fileID: 7174992294675550043, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.49999988
+      value: 0.49562165
       objectReference: {fileID: 0}
     - target: {fileID: 7174992294675550043, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.96790254
+      value: 0.9861029
       objectReference: {fileID: 0}
     - target: {fileID: 7174992294675550043, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
