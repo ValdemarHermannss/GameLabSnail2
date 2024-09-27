@@ -4243,6 +4243,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 620844125786672603, guid: 277aa8a1d169d8040b9066e9d4ac5ebd, type: 3}
+      propertyPath: particleEffectPrefab
+      value: 
+      objectReference: {fileID: 3121666912308071431, guid: a06c9fbf0e4c61c459ae48e7bcda026c, type: 3}
     - target: {fileID: 2352500021729087269, guid: 277aa8a1d169d8040b9066e9d4ac5ebd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02

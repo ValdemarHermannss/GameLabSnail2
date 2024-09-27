@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 439113332443779632}
   - component: {fileID: 5429179514794842831}
-  - component: {fileID: 3023263279601001767}
+  - component: {fileID: 4391496690213572084}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3023263279601001767
-BoxCollider2D:
+--- !u!70 &4391496690213572084
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,19 +117,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029814005, y: -0.3726837}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.52, y: 4.6}
-    newSize: {x: 3.52, y: 4.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.5659313, y: 3.3179708}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.048635475, y: -0.3809821}
+  m_Size: {x: 1.6069788, y: 3.157131}
+  m_Direction: 0
 --- !u!1 &4421936008698422337
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,8 +131,8 @@ GameObject:
   - component: {fileID: 2352500021729087269}
   - component: {fileID: 6319717629923623130}
   - component: {fileID: -2722552170881286173}
-  - component: {fileID: 2472690953762835233}
   - component: {fileID: 6725786230342939416}
+  - component: {fileID: 620844125786672603}
   m_Layer: 0
   m_Name: SnailPrefab
   m_TagString: Snail
@@ -209,22 +199,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2472690953762835233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4421936008698422337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e2f38e3a230be7459715027722ad1da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentColor: {r: 0, g: 0, b: 0, a: 0}
-  countdownTimer: {fileID: 0}
-  particleEffectPrefab: {fileID: 3121666912308071431, guid: a06c9fbf0e4c61c459ae48e7bcda026c, type: 3}
-  currentColorEnum: 0
 --- !u!96 &6725786230342939416
 TrailRenderer:
   serializedVersion: 3
@@ -329,6 +303,22 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &620844125786672603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4421936008698422337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fcf5a819ae3f3a4aa1f43071f2061cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
+  countdownTimer: {fileID: 0}
+  particleEffectPrefab: {fileID: 6891507660794219378}
+  currentColorEnum: 0
 --- !u!1001 &8426778268244592501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397,5 +387,10 @@ PrefabInstance:
 --- !u!4 &1240260194809786523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7334010990222309358, guid: a06c9fbf0e4c61c459ae48e7bcda026c, type: 3}
+  m_PrefabInstance: {fileID: 8426778268244592501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6891507660794219378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3121666912308071431, guid: a06c9fbf0e4c61c459ae48e7bcda026c, type: 3}
   m_PrefabInstance: {fileID: 8426778268244592501}
   m_PrefabAsset: {fileID: 0}
