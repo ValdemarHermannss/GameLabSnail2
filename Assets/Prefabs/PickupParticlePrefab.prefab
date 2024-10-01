@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4849729894706809151}
   - component: {fileID: 2742844591603348597}
   m_Layer: 0
-  m_Name: Particle System
-  m_TagString: Untagged
+  m_Name: PickupParticlePrefab
+  m_TagString: PickupParticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

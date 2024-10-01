@@ -4,23 +4,23 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - TestDoor
+  - Button
   - Snail
-  - RecipeScrap
-  - SpeedBoost
   - Trap
-  - Stopwatch
-  - NextLevel
-  - BlueDoor
-  - BluePaint
   - RedPaint
   - RedDoor
-  - Button
-<<<<<<< Updated upstream
-  - MovingDoor
-  - Walls
-  - GreenPaint
-  - GreenDoor
+  - NextLevel
+  - RecipeScrap
   - DangerZone
+  - Walls
+  - MovingDoor
+  - PickupParticle
+  - NextLevelParticle
+  - SpeedBoost
+  - GreenPaint
+  - Stopwatch
+  - GreenDoor
   layers:
   - Default
   - TransparentFX

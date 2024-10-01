@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CountdownTimer countdownTimer;
 
     public GameObject particleEffectPrefab;
+    public GameObject NextLevelParticlePrefab;
 
 
     public enum availablecolors
@@ -93,20 +94,14 @@ public class GameManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         {
-            // Next level and previous level checking code. Respawn point stuff not implemented yet.
+            // Next level portal
             if (other.gameObject.tag == "NextLevel")
             {
-                if (DataStore.Collectibles.Count >= 5)
-                {
-                    SceneManager.LoadScene("SpecialWinningScene");
-                    return;
-                }
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                Debug.Log("Player finished level goal");
-            }
-            if (other.gameObject.tag == "PreviousLevel")
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                GetComponent<PlayerMovement>().enabled = false;
+                GetComponentInChildren<SpriteRenderer>().enabled = false;
+                GameObject g = Instantiate(NextLevelParticlePrefab);
+                g.transform.position = other.gameObject.transform.position;
+                StartCoroutine(LoadNextLevel());
             }
         }
  
@@ -194,6 +189,12 @@ public class GameManager : MonoBehaviour
         
     }
 
+    void LoadSpecialWin()
+    {
+        SceneManager.LoadScene("SpecialWinningScene");
+        return;
+    }
+
     // Collider disabling door
     private IEnumerator DisableDoorCollider(GameObject gameObject)
     {
@@ -201,6 +202,21 @@ public class GameManager : MonoBehaviour
         collider.enabled = false;
         yield return new WaitForSeconds(5f);
         collider.enabled = true;
+    }
+
+    IEnumerator LoadNextLevel()
+    {
+        yield return new WaitForSeconds(5f);
+        if (DataStore.Collectibles.Count >= 5)
+        {
+            LoadSpecialWin();
+        }
+        else
+        {
+            Debug.Log("Player finished level goal");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        }
     }
 }
 

@@ -318,6 +318,7 @@ MonoBehaviour:
   currentColor: {r: 0, g: 0, b: 0, a: 0}
   countdownTimer: {fileID: 0}
   particleEffectPrefab: {fileID: 6891507660794219378}
+  NextLevelParticlePrefab: {fileID: 3121666912308071431, guid: be90ec1c4d666bb49b93a6079e4c209e, type: 3}
   currentColorEnum: 0
 --- !u!1001 &8426778268244592501
 PrefabInstance:
