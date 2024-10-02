@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public GameObject NextLevelParticlePrefab;
     
 
+    public bool isInDanger = false;
+
 
     public enum availablecolors
     {
@@ -87,6 +89,15 @@ public class GameManager : MonoBehaviour
             {
                 StartCoroutine(DisableDoorCollider(collision.gameObject));
                 Debug.Log("Got through blue door");
+            }
+        }
+
+        if(collision.gameObject.tag == "MovingDoor")
+        {
+            if(isInDanger == true)
+            {
+                DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("GameOverScene");
             }
         }
     }
@@ -174,6 +185,18 @@ public class GameManager : MonoBehaviour
         }
 
         
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("DangerZone"))
+        {
+            isInDanger = true;
+        }
+        else
+        {
+            isInDanger = false;
+        }
     }
 
     void LoadSpecialWin()

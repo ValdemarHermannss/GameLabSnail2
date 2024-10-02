@@ -36,7 +36,7 @@ public class AnimatedWallTest : MonoBehaviour
         }
         isCrushing = !isGrowing;     
     } 
-    private void OnCollisionEnter2D(Collision2D other)
+    /*private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("DangerZone"))
         {
@@ -46,11 +46,14 @@ public class AnimatedWallTest : MonoBehaviour
 
         if (isInDanger == true)
         {
-            other.gameObject.CompareTag("Snail");
-            DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("GameOverScene");
+           if( other.gameObject.CompareTag("Snail"))
+           {
+                DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("GameOverScene");
+
+           }
         }
-    }
+    }*/
 }
 
 
