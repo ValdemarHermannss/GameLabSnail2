@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject particleEffectPrefab;
     public GameObject NextLevelParticlePrefab;
+    
 
 
     public enum availablecolors
@@ -32,11 +33,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Trail
+            //Trail
         tr = GetComponent<TrailRenderer>();
         tr.material = new Material(Shader.Find("Sprites/Default"));
 
-        // A simple 2 color gradient with a fixed alpha of 1.0f.
+            // Trail renderer code
         float alpha = 1.0f;
         Gradient gradient = new Gradient();
         gradient.SetKeys(
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
         //Colliders
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Door disabling code. It checks if the door has been collided with and if it's with the right color.
+            // Doors. Checking wether you can pass through the colored door or not.
         if (collision.gameObject.tag == "RedDoor")
         {
             Debug.Log("Collided with Door");
@@ -94,9 +95,9 @@ public class GameManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         {
-            // Next level portal
+                // Next level portal
             if (other.gameObject.tag == "NextLevel")
-            {
+            {                
                 GetComponent<PlayerMovement>().enabled = false;
                 GetComponentInChildren<SpriteRenderer>().enabled = false;
                 GameObject g = Instantiate(NextLevelParticlePrefab);
@@ -113,10 +114,9 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("GameOverScene");
         }
        
-        //Trail color changes
+            //Trail color changes
         if (other.gameObject.tag == "RedPaint")
         {
-            // Changes the color of the trail
             currentColor = Color.red;
             GetComponent<TrailRenderer>().material.color = currentColor;
             Debug.Log("Snail Collided with " + other.gameObject.tag);
@@ -125,7 +125,6 @@ public class GameManager : MonoBehaviour
 
         if (other.gameObject.tag == "GreenPaint")
         {
-            // Changes the color of the trail
             currentColor = Color.green;
             GetComponent<TrailRenderer>().material.color = currentColor;
             Debug.Log("Snail Collided with " + other.gameObject.tag);
@@ -134,26 +133,14 @@ public class GameManager : MonoBehaviour
 
         if (other.gameObject.tag == "BluePaint")
         {
-            // Changes the color of the trail
             currentColor = Color.blue;
             GetComponent<TrailRenderer>().material.color = currentColor;
             Debug.Log("Snail Collided with " + other.gameObject.tag);
             currentColorEnum = availablecolors.blue;
         }
 
-        //Doors
-        if (other.gameObject.tag == "RedDoor")
-        {
-            Debug.Log("Collided with Door");
 
-            if (currentColorEnum == availablecolors.red)
-            {
-                StartCoroutine(DisableDoorCollider(other.gameObject));
-                Debug.Log("Got through red door");
-            }
-        }
-
-        //Time pickups
+            //Time pickups
         if (other.gameObject.CompareTag("Stopwatch"))
         {
             Debug.Log("Picked up " + other.gameObject.tag);
@@ -168,7 +155,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("In the Zone");
         }
 
-        //Recipe scraps
+            //Recipe scraps
         if (other.gameObject.CompareTag("RecipeScrap"))
         {
             Debug.Log("Recipe Scrap collected ");
@@ -195,7 +182,7 @@ public class GameManager : MonoBehaviour
         return;
     }
 
-    // Collider disabling door
+        // A code which allows you to pass through colored doors if your trail matches the color.
     private IEnumerator DisableDoorCollider(GameObject gameObject)
     {
         Collider2D collider = gameObject.GetComponent<Collider2D>();
@@ -204,6 +191,7 @@ public class GameManager : MonoBehaviour
         collider.enabled = true;
     }
 
+        // A delay before you enter the next level. To let the player breathe.
     IEnumerator LoadNextLevel()
     {
         yield return new WaitForSeconds(5f);
