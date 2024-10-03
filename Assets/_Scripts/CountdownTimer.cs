@@ -12,7 +12,7 @@ public class CountdownTimer : MonoBehaviour
     public float startTime = 200f;
     public float timeLeft;
 
-    public bool levelFinished;
+    public bool timeStopped;
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class CountdownTimer : MonoBehaviour
     private void Start()
     {
         StartTime();
-        levelFinished = false;
+        timeStopped = false;
     }
 
     private void Update()
@@ -38,7 +38,7 @@ public class CountdownTimer : MonoBehaviour
 
         }
         
-        else if (levelFinished == false)
+        else if (timeStopped == false)
         {
             timeLeft -= Time.deltaTime;
         }

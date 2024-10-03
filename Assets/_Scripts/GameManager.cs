@@ -18,8 +18,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject particleEffectPrefab;
     public GameObject NextLevelParticlePrefab;
+    public GameObject DeathParticlePrefab;
 
     public TMP_Text levelFinishedText;
+    public TMP_Text youDiedText;
 
     public bool isInDanger = false;
 
@@ -38,8 +40,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         levelFinishedText.GetComponent<TMP_Text>().enabled = false;
+        youDiedText.GetComponent<TMP_Text>().enabled = false;
 
-            //Trail
+        //Trail
         tr = GetComponent<TrailRenderer>();
         tr.material = new Material(Shader.Find("Sprites/Default"));
 
@@ -114,7 +117,7 @@ public class GameManager : MonoBehaviour
             if (other.gameObject.tag == "NextLevel")
             {
                 levelFinishedText.GetComponent<TMP_Text>().enabled = true;
-                GetComponent<CountdownTimer>().levelFinished = true;
+                GetComponent<CountdownTimer>().timeStopped = true;
                 GetComponent<PlayerMovement>().enabled = false;
                 GetComponentInChildren<SpriteRenderer>().enabled = false;
                 GameObject g = Instantiate(NextLevelParticlePrefab);
@@ -127,8 +130,13 @@ public class GameManager : MonoBehaviour
         if (other.gameObject.tag == "Trap")
         {
             // Kills the player
-            DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
-            SceneManager.LoadScene("GameOverScene");
+            youDiedText.GetComponent<TMP_Text>().enabled = true;
+            GetComponent<CountdownTimer>().timeStopped = true;
+            GetComponent<PlayerMovement>().enabled = false;
+            GetComponentInChildren<SpriteRenderer>().enabled = false;
+            GameObject g = Instantiate(DeathParticlePrefab);
+            g.transform.position = gameObject.transform.position;
+            StartCoroutine(LoadDeath());
         }
        
             //Trail color changes
@@ -234,6 +242,13 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
+    }
+
+    IEnumerator LoadDeath()
+    {
+        yield return new WaitForSeconds(2.5f);
+        DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameOverScene");
     }
 }
 
