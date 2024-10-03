@@ -12,6 +12,8 @@ public class CountdownTimer : MonoBehaviour
     public float startTime = 200f;
     public float timeLeft;
 
+    public bool levelFinished;
+
     private void Awake()
     {
         instance = this;
@@ -20,6 +22,7 @@ public class CountdownTimer : MonoBehaviour
     private void Start()
     {
         StartTime();
+        levelFinished = false;
     }
 
     private void Update()
@@ -28,13 +31,14 @@ public class CountdownTimer : MonoBehaviour
         if (timeLeft <= 0)
         {
 
-            // Game Over ();
+            // Game Over
             timeLeft = 0;
             timerText.color = Color.red;
             SceneManager.LoadScene("GameOverScene");
 
         }
-        else
+        
+        else if (levelFinished == false)
         {
             timeLeft -= Time.deltaTime;
         }
