@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class GameManager : MonoBehaviour
@@ -17,7 +18,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject particleEffectPrefab;
     public GameObject NextLevelParticlePrefab;
-    
+
+    public TMP_Text levelFinishedText;
 
 
     public enum availablecolors
@@ -33,6 +35,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        levelFinishedText.GetComponent<TMP_Text>().enabled = false;
+
             //Trail
         tr = GetComponent<TrailRenderer>();
         tr.material = new Material(Shader.Find("Sprites/Default"));
@@ -97,7 +101,9 @@ public class GameManager : MonoBehaviour
         {
                 // Next level portal
             if (other.gameObject.tag == "NextLevel")
-            {                
+            {
+                levelFinishedText.GetComponent<TMP_Text>().enabled = true;
+                GetComponent<CountdownTimer>().levelFinished = true;
                 GetComponent<PlayerMovement>().enabled = false;
                 GetComponentInChildren<SpriteRenderer>().enabled = false;
                 GameObject g = Instantiate(NextLevelParticlePrefab);
