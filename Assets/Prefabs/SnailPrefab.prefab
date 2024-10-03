@@ -319,6 +319,10 @@ MonoBehaviour:
   countdownTimer: {fileID: 0}
   particleEffectPrefab: {fileID: 6891507660794219378}
   NextLevelParticlePrefab: {fileID: 3121666912308071431, guid: be90ec1c4d666bb49b93a6079e4c209e, type: 3}
+  DeathParticlePrefab: {fileID: 3121666912308071431, guid: 2e6b0a7570bfc774091e062d2850e04f, type: 3}
+  levelFinishedText: {fileID: 0}
+  youDiedText: {fileID: 0}
+  isInDanger: 0
   currentColorEnum: 0
 --- !u!1001 &8426778268244592501
 PrefabInstance:
