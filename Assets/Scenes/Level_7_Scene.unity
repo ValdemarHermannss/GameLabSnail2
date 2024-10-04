@@ -1805,6 +1805,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4124992941422228812, guid: 1db1b583baa87854c93bd5f3f4d31164, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.290916
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124992941422228812, guid: 1db1b583baa87854c93bd5f3f4d31164, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.290916
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124992941422228812, guid: 1db1b583baa87854c93bd5f3f4d31164, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.290916
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124992941422228812, guid: 1db1b583baa87854c93bd5f3f4d31164, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24
+      objectReference: {fileID: 0}
     - target: {fileID: 4273282286276358538, guid: 1db1b583baa87854c93bd5f3f4d31164, type: 3}
       propertyPath: m_Name
       value: SpeedBoostPrefab
