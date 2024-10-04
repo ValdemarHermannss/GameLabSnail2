@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
             //Trail color changes
         if (other.gameObject.tag == "RedPaint")
         {
-            currentColor = Color.red;
+            currentColor = other.GetComponent<SpriteRenderer>().color;
             GetComponent<TrailRenderer>().material.color = currentColor;
             Debug.Log("Snail Collided with " + other.gameObject.tag);
             currentColorEnum = availablecolors.red;
@@ -155,7 +155,7 @@ public class GameManager : MonoBehaviour
 
         if (other.gameObject.tag == "GreenPaint")
         {
-            currentColor = Color.green;
+            currentColor = other.GetComponent<SpriteRenderer>().color;
             GetComponent<TrailRenderer>().material.color = currentColor;
             Debug.Log("Snail Collided with " + other.gameObject.tag);
             currentColorEnum = availablecolors.green;
@@ -163,7 +163,7 @@ public class GameManager : MonoBehaviour
 
         if (other.gameObject.tag == "BluePaint")
         {
-            currentColor = Color.blue;
+            currentColor = other.GetComponent<SpriteRenderer>().color;
             GetComponent<TrailRenderer>().material.color = currentColor;
             Debug.Log("Snail Collided with " + other.gameObject.tag);
             currentColorEnum = availablecolors.blue;
@@ -222,7 +222,7 @@ public class GameManager : MonoBehaviour
         return;
     }
 
-        // A code which allows you to pass through colored doors if your trail matches the color.
+        // code which allows you to pass through colored doors if your trail matches the color.
     private IEnumerator DisableDoorCollider(GameObject gameObject)
     {
         Collider2D collider = gameObject.GetComponent<Collider2D>();

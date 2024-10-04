@@ -1245,13 +1245,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337418138}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.9, y: 0.7499974, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 2.114523, y: 13.744462, z: 0}
+  m_LocalScale: {x: 2.2655706, y: 2.2655706, z: 2.2655702}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1332925412}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &337418140
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1337,9 +1337,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 580629b1c2607bf47a7b3e993f0f403f, type: 3}
-  m_Color: {r: 0.10980393, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.23529412, g: 0.827451, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4441,7 +4441,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0295dade03ff7e94abfea54875b52ec9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7bdbdfa3fea052e47ac72c0a12f914ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4460,14 +4460,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332925410}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 7.24, y: 3.66, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 7.389, y: 3.796, z: 0}
+  m_LocalScale: {x: 0.0264834, y: 0.0264834, z: 0.0264834}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 337418139}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &1348009757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5288,7 +5288,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.12124872, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.23467551, g: 0.82641506, b: 0.15436803, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
