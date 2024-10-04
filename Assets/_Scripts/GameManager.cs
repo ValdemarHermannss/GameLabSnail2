@@ -98,13 +98,18 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Got through blue door");
             }
         }
-
+            // Death by being crushed by moving door
         if(collision.gameObject.tag == "MovingDoor")
         {
             if(isInDanger == true)
             {
-                DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
-                SceneManager.LoadScene("GameOverScene");
+                youDiedText.GetComponent<TMP_Text>().enabled = true;
+                GetComponent<CountdownTimer>().timeStopped = true;
+                GetComponent<PlayerMovement>().enabled = false;
+                GetComponentInChildren<SpriteRenderer>().enabled = false;
+                GameObject g = Instantiate(DeathParticlePrefab);                
+                g.transform.position = gameObject.transform.position;
+                StartCoroutine(LoadCrushedDeath());
             }
         }
     }
@@ -175,10 +180,6 @@ public class GameManager : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.tag == "DangerZone")
-        {
-            Debug.Log("In the Zone");
-        }
 
             //Recipe scraps
         if (other.gameObject.CompareTag("RecipeScrap"))
@@ -194,10 +195,12 @@ public class GameManager : MonoBehaviour
 
             Debug.Log(DataStore.Collectibles.Count);
             Destroy(other.gameObject);
-
-
         }
 
+        if (other.gameObject.tag == "DangerZone")
+        {
+            Debug.Log("In the Zone");
+        }
         
     }
 
@@ -245,6 +248,13 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator LoadDeath()
+    {
+        yield return new WaitForSeconds(2.5f);
+        DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameOverScene");
+    }
+
+    IEnumerator LoadCrushedDeath()
     {
         yield return new WaitForSeconds(2.5f);
         DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
