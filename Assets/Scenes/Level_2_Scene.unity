@@ -1231,7 +1231,7 @@ GameObject:
   - component: {fileID: 337418141}
   - component: {fileID: 337418140}
   m_Layer: 0
-  m_Name: Paint
+  m_Name: GreenPaint
   m_TagString: GreenPaint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4333,7 +4333,7 @@ GameObject:
   - component: {fileID: 1332925412}
   - component: {fileID: 1332925411}
   m_Layer: 0
-  m_Name: Bucket
+  m_Name: GreenBucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6147,12 +6147,12 @@ SceneRoots:
   - {fileID: 718765717}
   - {fileID: 570939857}
   - {fileID: 1173446756}
-  - {fileID: 553123138}
   - {fileID: 217310542}
   - {fileID: 1767603463}
   - {fileID: 642377614}
-  - {fileID: 1434924901}
-  - {fileID: 1566860139}
-  - {fileID: 1393886296}
   - {fileID: 1332925412}
+  - {fileID: 1566860139}
+  - {fileID: 553123138}
+  - {fileID: 1393886296}
   - {fileID: 595558676}
+  - {fileID: 1434924901}

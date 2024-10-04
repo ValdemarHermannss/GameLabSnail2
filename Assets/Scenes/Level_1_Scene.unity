@@ -2336,7 +2336,7 @@ GameObject:
   - component: {fileID: 1484554722}
   - component: {fileID: 1484554721}
   m_Layer: 0
-  m_Name: Bucket
+  m_Name: RedBucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2383,7 +2383,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0295dade03ff7e94abfea54875b52ec9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7bdbdfa3fea052e47ac72c0a12f914ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2402,14 +2402,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484554720}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.71, y: 4.93, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: -2.841, y: 4.93, z: 0}
+  m_LocalScale: {x: 0.0264834, y: 0.02648, z: 0.02648}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1839850797}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!1001 &1570707962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2616,7 +2616,7 @@ GameObject:
   - component: {fileID: 1839850799}
   - component: {fileID: 1839850798}
   m_Layer: 0
-  m_Name: Paint
+  m_Name: RedPaint
   m_TagString: RedPaint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2630,9 +2630,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839850796}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.9, y: 0.7499974, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: 1.8502055, y: 15.21904, z: 0}
+  m_LocalScale: {x: 2.2658608, y: 2.26557, z: 2.265861}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1484554722}
@@ -2722,7 +2722,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 580629b1c2607bf47a7b3e993f0f403f, type: 3}
   m_Color: {r: 0.8627451, g: 0.08627451, b: 0.050980393, a: 1}
   m_FlipX: 0
@@ -3701,11 +3701,11 @@ SceneRoots:
   - {fileID: 718765717}
   - {fileID: 1172695674}
   - {fileID: 2135507530}
-  - {fileID: 6561426386386409189}
   - {fileID: 1204781609}
   - {fileID: 1767603463}
   - {fileID: 253858385}
-  - {fileID: 1434924901}
-  - {fileID: 2005064603}
   - {fileID: 1484554722}
+  - {fileID: 2005064603}
+  - {fileID: 6561426386386409189}
   - {fileID: 1570707962}
+  - {fileID: 1434924901}
