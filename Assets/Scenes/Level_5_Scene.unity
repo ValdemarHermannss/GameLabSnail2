@@ -3750,13 +3750,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: recipe scrap
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: 5293439658737548391, guid: 0a3a779ba5e244a43a43ec118fb2fb50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.24
+=======
+    - target: {fileID: 6680986071957088483, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.26255637
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680986071957088483, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.47260147
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680986071957088483, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.52511275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680986071957088483, guid: 713f7434af1c80940bf33a6ca3a8df44, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.562
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5293439658737548391, guid: 0a3a779ba5e244a43a43ec118fb2fb50, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< Updated upstream
       value: 4.23
+=======
+      value: -2.046
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 5293439658737548391, guid: 0a3a779ba5e244a43a43ec118fb2fb50, type: 3}
       propertyPath: m_LocalPosition.z
