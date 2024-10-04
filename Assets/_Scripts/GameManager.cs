@@ -103,8 +103,13 @@ public class GameManager : MonoBehaviour
         {
             if(isInDanger == true)
             {
-                DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
-                SceneManager.LoadScene("GameOverScene");
+                youDiedText.GetComponent<TMP_Text>().enabled = true;
+                GetComponent<CountdownTimer>().timeStopped = true;
+                GetComponent<PlayerMovement>().enabled = false;
+                GetComponentInChildren<SpriteRenderer>().enabled = false;
+                GameObject g = Instantiate(DeathParticlePrefab);
+                g.transform.position = gameObject.transform.position;
+                StartCoroutine(LoadCrushDeath());
             }
         }
     }
@@ -245,6 +250,13 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator LoadDeath()
+    {
+        yield return new WaitForSeconds(2.5f);
+        DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameOverScene");
+    }
+
+    IEnumerator LoadCrushDeath()
     {
         yield return new WaitForSeconds(2.5f);
         DataStore.Collectibles.Remove(SceneManager.GetActiveScene().name);
