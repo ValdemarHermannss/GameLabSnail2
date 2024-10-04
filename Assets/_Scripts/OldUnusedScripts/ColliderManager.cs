@@ -171,7 +171,11 @@ public class ColliderManager : MonoBehaviour
             }
 
             Debug.Log(DataStore.Collectibles.Count);
-            Destroy(other.gameObject);            
+            Destroy(other.gameObject);
+
+
+
+
         }
 
     }
