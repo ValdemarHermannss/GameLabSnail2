@@ -58,7 +58,7 @@ public class ButtonManager : MonoBehaviour
 
     public void IPressedTheButton()
     {
-        Debug.Log("i pressed the button");
+        Debug.Log("You pressed the button");
         
     }
 }

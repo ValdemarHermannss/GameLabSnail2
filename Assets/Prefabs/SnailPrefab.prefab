@@ -317,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentColor: {r: 0, g: 0, b: 0, a: 0}
   countdownTimer: {fileID: 0}
-  particleEffectPrefab: {fileID: 6891507660794219378}
+  PickupParticlePrefab: {fileID: 3121666912308071431, guid: a06c9fbf0e4c61c459ae48e7bcda026c, type: 3}
   NextLevelParticlePrefab: {fileID: 3121666912308071431, guid: be90ec1c4d666bb49b93a6079e4c209e, type: 3}
   DeathParticlePrefab: {fileID: 3121666912308071431, guid: 2e6b0a7570bfc774091e062d2850e04f, type: 3}
   levelFinishedText: {fileID: 0}
@@ -392,10 +392,5 @@ PrefabInstance:
 --- !u!4 &1240260194809786523 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7334010990222309358, guid: a06c9fbf0e4c61c459ae48e7bcda026c, type: 3}
-  m_PrefabInstance: {fileID: 8426778268244592501}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6891507660794219378 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3121666912308071431, guid: a06c9fbf0e4c61c459ae48e7bcda026c, type: 3}
   m_PrefabInstance: {fileID: 8426778268244592501}
   m_PrefabAsset: {fileID: 0}

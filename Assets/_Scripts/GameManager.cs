@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private float Timer;
     [SerializeField] private CountdownTimer countdownTimer;
 
-    public GameObject particleEffectPrefab;
+    public GameObject PickupParticlePrefab;
     public GameObject NextLevelParticlePrefab;
     public GameObject DeathParticlePrefab;
 
@@ -170,7 +170,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Picked up " + other.gameObject.tag);
             CountdownTimer.instance.timeLeft += 5;
-            GameObject g = Instantiate(particleEffectPrefab);
+            GameObject g = Instantiate(PickupParticlePrefab);
             g.transform.position = other.gameObject.transform.position;
             Destroy(other.gameObject);
         }
@@ -184,7 +184,7 @@ public class GameManager : MonoBehaviour
         if (other.gameObject.CompareTag("RecipeScrap"))
         {
             Debug.Log("Recipe Scrap collected ");
-            GameObject g = Instantiate(particleEffectPrefab);
+            GameObject g = Instantiate(PickupParticlePrefab);
             g.transform.position = other.gameObject.transform.position;
 
             if (!DataStore.Collectibles.Contains(SceneManager.GetActiveScene().name))
