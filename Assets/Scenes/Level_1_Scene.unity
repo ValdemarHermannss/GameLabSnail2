@@ -2516,7 +2516,7 @@ GameObject:
   - component: {fileID: 1484554722}
   - component: {fileID: 1484554721}
   m_Layer: 0
-  m_Name: bucket
+  m_Name: Bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2602,7 +2602,7 @@ GameObject:
   - component: {fileID: 1575183354}
   - component: {fileID: 1575183353}
   m_Layer: 0
-  m_Name: salt
+  m_Name: Salt
   m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2857,7 +2857,7 @@ GameObject:
   - component: {fileID: 1839850799}
   - component: {fileID: 1839850798}
   m_Layer: 0
-  m_Name: paint
+  m_Name: Paint
   m_TagString: RedPaint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

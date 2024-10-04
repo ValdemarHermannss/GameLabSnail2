@@ -1231,7 +1231,7 @@ GameObject:
   - component: {fileID: 337418141}
   - component: {fileID: 337418140}
   m_Layer: 0
-  m_Name: paint
+  m_Name: Paint
   m_TagString: GreenPaint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2028,7 +2028,7 @@ GameObject:
   - component: {fileID: 585646337}
   - component: {fileID: 585646336}
   m_Layer: 0
-  m_Name: salt
+  m_Name: Salt
   m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4394,7 +4394,7 @@ GameObject:
   - component: {fileID: 1332925412}
   - component: {fileID: 1332925411}
   m_Layer: 0
-  m_Name: bucket
+  m_Name: Bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4877,7 +4877,7 @@ GameObject:
   - component: {fileID: 1393886295}
   - component: {fileID: 1393886297}
   m_Layer: 0
-  m_Name: stopwatch
+  m_Name: Stopwatch
   m_TagString: Stopwatch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
